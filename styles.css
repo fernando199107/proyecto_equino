@@ -1,12 +1,162 @@
-* {
+/* ==========================================
+   1. ESTILOS GENERALES (Paleta Café Sobria)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f4f0; /* Fondo arena suave */
+    color: #3e2723; /* Texto café oscuro */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #4a3424; /* Café chocolate oscuro */
+    display: flex; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none; 
+    padding: 16px 22px;
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2c1e15; /* Café más oscuro */
+}
+
+/* Submenú Desplegable (Servicios) */
+nav ul ul {
+    position: absolute; 
+    background-color: #5c4033; /* Café intermedio */
+    display: none; 
+    min-width: 180px;
+    flex-direction: column; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+nav ul ul a:hover {
+    background-color: #3e2723;
+}
+
+nav li:hover > ul {
+    display: flex; 
+}
+
+/* Elemento Cerrar Sesión empujado a la derecha */
+nav ul li.logout {
+    margin-left: auto;
+}
+
+nav ul li.logout a {
+    color: #d7ccc8; /* Tono beige claro diferencial */
+}
+
+/* ==========================================
+   3. CONTENEDORES DE CONTENIDO (Inicio y Formularios)
+   ========================================== */
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.08);
+    border-left: 5px solid #8b5a2b; /* Detalle elegante en el lateral */
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+h1 {
+    color: #5c4033;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #4e342e;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ==========================================
+   4. ESTILOS ESPECÍFICOS PARA EL LOGIN
+   ========================================== */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-color: #f7f4f0;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    max-width: 400px; /* Un poco más angosto que los formularios comunes */
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.12);
+    border-top: 5px solid #8b5a2b; /* El mismo detalle bronce de tu proyecto */
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #795548;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d7ccc8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #3e2723;
+    background-color: #faf9f6;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+/* Clase específica para el botón de ingreso */
+.btn-login {
+    width: 100%;
+    background-color: #4a3424; /* Café chocolate oscuro */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+/* Efecto cuando pasas el mouse por encima */
+.btn-login:hover {
+    background-color: #2c1e15; /* Se oscurece el café */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }

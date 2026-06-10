@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto Web</title>
+    <title>proyecto de equinos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>¡Hola!</h1>
+    <h1>¡proyecto equinos!</h1>
     <p>Esta es la estructura base de mi proyecto.</p>
     <script src="main.js"></script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Desplegable</title>
+    <style>
+        /* 1. Estilos del menú principal */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #333; 
+            display: flex; 
+        }
+        nav li {
+            position: relative; /*aliniacion del menu */
+        }
+        nav a {
+            color: white;
+            text-decoration: none; 
+            padding: 15px 20px;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #000000;
+        }
+
+        /* 2. Estilos del SUBMENÚ (Opciones ocultas) */
+        nav ul ul {
+            position: absolute; 
+            background-color: #444;
+            display: none; 
+            min-width: 160px;
+            flex-direction: column; 
+        }
+        /* 3. aqui cuando se pasa el cursor sore el sub menu se abre */
+        nav li:hover > ul {
+            display: flex; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            
+            <li>
+                <a href="#">Servicios ▾</a>
+                <ul>
+                    <li><a href="registro_equino.html">Registrar Equino</a></li>
+                    <li><a href="#">Programación de citas</a></li>
+                    <li><a href="#">atencion al cliente</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
 </body>
 </html>

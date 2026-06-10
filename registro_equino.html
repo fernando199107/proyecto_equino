@@ -1,0 +1,132 @@
+<<form id="formulario-registro" action="#" method="POST">
+<html lang="es">
+<head>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Equinos</title>
+    <style>
+        /* Estilos básicos para que el formulario se vea genial */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ea; /* Un tono beige/campo */
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #4a3728; /* Color café oscuro */
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="date"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Evita que el input se salga de la pantalla */
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #5c4033;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4a3728;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registro de Equino</h2>
+    
+    <form action="#" method="POST">
+        
+        <!-- 1. Nombre del caballo -->
+        <div class="form-group">
+            <label for="nombre">Nombre del Equino:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Tornado" required>
+        </div>
+
+        <!-- 2. Fecha de Nacimiento -->
+        <div class="form-group">
+            <label for="nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento" required>
+        </div>
+
+        <!-- 3. Género (Sexo) -->
+        <div class="form-group">
+            <label>Sexo:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sexo" value="macho" required> Macho (Caballo/Padrillo)</label>
+                <label><input type="radio" name="sexo" value="hembra"> Hembra (Yegua)</label>
+            </div>
+        </div>
+
+        <!-- 4. Raza (Menú desplegable de selección) -->
+        <div class="form-group">
+            <label for="raza">Raza:</label>
+            <select id="raza" name="raza" required>
+                <option value="">-- Selecciona una raza --</option>
+                <option value="pura_sangre">Pura Sangre Inglés</option>
+                <option value="cuarto_milla">Cuarto de Milla</option>
+                <option value="arabe">Árabe</option>
+                <option value="andaluz">Andaluz (P.R.E.)</option>
+                <option value="criollo">Criollo</option>
+                <option value="otra">Otra / Mestizo</option>
+            </select>
+        </div>
+
+        <!-- 5. Pelaje / Capa -->
+        <div class="form-group">
+            <label for="pelaje">Pelaje (Capa):</label>
+            <select id="pelaje" name="pelaje">
+                <option value="alazan">Alazán (Rojizo)</option>
+                <option value="azabache">Azabache (Negro)</option>
+                <option value="tordillo">Tordillo (Gris/Blanco)</option>
+                <option value="bayo">Bayo (Amarillento)</option>
+                <option value="zaino">Zaino (Castaño)</option>
+            </select>
+        </div>
+
+        <!-- 6. Número de Microchip o Identificación -->
+        <div class="form-group">
+            <label for="chip">Número de Microchip / Marca:</label>
+            <input type="text" id="chip" name="chip" placeholder="Código de barra o ID único">
+        </div>
+
+        <!-- Botón de enviar -->
+        <button type="submit">Registrar Equino</button>
+
+    </form>
+</div>
+
+</body>
+</html>
